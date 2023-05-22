@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myappv
+  labels:
+    app: myappv
+spec:
+  containers:
+  - name: myappimage
+    image: jesteenwrangler/pythonflaskapi:myappimage
+    ports:
+    - containerPort: 5000
+      hostPort: 5000
